@@ -1,20 +1,23 @@
 html {
-    font-size: 20px;
+    font-size: 15px;
 }
 body {
-    background-color: darkmagenta
+    background-color: rgb(155, 168, 156);
     font-family: 'Rubik', sans-serif;
 }
 .konteiner {
-    background-color: burlywood;
-
+    background-color: rgb(106, 116, 160);
+    
+}
+.uudistevoog {
+    display: flex;
 }
 .uudis-pealkiri {
     font-size: 1,5rem;
 }
 .uudis-kuupäev {
     font-size: 0,7rem;
-    color: chartreuse;
+    color: rgb(25, 44, 5);
     font-weight: bold;
 }
   

@@ -1,6 +1,6 @@
 #konteiner {
-    background-color: bisque;
-    width: 300px;
+    background-color: rgb(122, 150, 150);
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -10,6 +10,5 @@
     margin-bottom: 15px;
 }
 body {
-    background-color: aquamarine;
-
+    background-color: rgb(242, 247, 245);
 }
