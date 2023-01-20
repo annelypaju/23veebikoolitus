@@ -1,0 +1,37 @@
+body {
+    background-color: goldenrod;
+}
+
+.tablet {
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: darkcyan;
+    }
+    .mobiil {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+    
+}
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: rgb(130, 185, 26);
+    }
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+    
+}
