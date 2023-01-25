@@ -1,0 +1,7 @@
+.jumbotron {
+    background-color: aquamarine;
+    color: aliceblue;
+    background-image: url('./sinine taust.jpg');
+    background-size: cover;
+background-position: center;
+}
