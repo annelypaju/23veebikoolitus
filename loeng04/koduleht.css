@@ -87,3 +87,15 @@ nav {
     
    }
 }
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.jalusmenyy ul {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+   } 
