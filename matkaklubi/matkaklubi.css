@@ -113,10 +113,34 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     width: 400px;
+
+  
     
 }
+.pealispilt {
+    overflow: hidden;
+}
+.pealispilt .matkaja {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: -400px;
+    
+   
+}
+.pealispilt .vari {
+    width: 1087px;
+    height: 87px;
+    margin-top: -37px;
+    margin-right: -178px;
+}
 
-
+@media (min-width: 1100px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 90%
+    }
+}
 
 @media screen and (min-width: 768px) {
     .pealkiri_pilt {
@@ -129,14 +153,14 @@ body {
    
 }
 .button {
-    background-color: #090909;
+  background-color: #090909;
   border: none;
   color: white;
   padding: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
   font-size: 0.8rem;
   text-transform: uppercase;
   
