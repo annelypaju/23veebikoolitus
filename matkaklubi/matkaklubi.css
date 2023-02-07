@@ -24,6 +24,8 @@ body {
     padding: 15px;
 }
 
+
+
 .pais-logo {
     height: 64px;
     width: 66px;
@@ -117,9 +119,11 @@ body {
   
     
 }
+
 .pealispilt {
     overflow: hidden;
 }
+
 .pealispilt .matkaja {
     width: 750px;
     height: 750px;
@@ -129,14 +133,16 @@ body {
     
    
 }
+
 .pealispilt .vari {
-    width: 1087px;
+    width: 1091px;
     height: 87px;
-    margin-top: -37px;
-    margin-right: -178px;
+    margin-top: -40px;
+    margin-right: -152px;
+
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 90%
     }
@@ -165,5 +171,10 @@ body {
   text-transform: uppercase;
   
 }
+
+
+
+
+
 
   
