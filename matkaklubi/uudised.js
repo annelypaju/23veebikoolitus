@@ -1,63 +1,70 @@
-const koikUudised = [
+const Uudised = [
     {
-        pealkiri: "Õhtupoolik looduses",
-        pilt: "./pilt1.jpg",
-        kuupaev: "06.02.2023",
-        sisu: "Mis saaks parem olla kui peale pikka seminaripäeva veeta õhtupoolik looduses?",
-        autor: "Autor: internet",
-        
-        
+        nimi: 'Õhtupoolik looduses',
+        pildiAadress: './assets/pilt1.jpg',
+        kuupaev: '06.02.2023',
+        sisu: 'Mis saaks parem olla kui peale pikka seminaripäeva veeta õhtupoolik looduses?',
+        autor: 'Autor: internet',
+
+
     },
     {
-        pealkiri: "ATV matkad",
-        pilt: "./pilt2.jpg",
+        nimi: "ATV matkad",
+        pildiAadress: './assets/pilt2.jpg',
         kuupaev: "07.02.2023",
         sisu: "Korraldame aastaringselt ATV matkasid nii algajatele kui ka kogenud sõitjale looduskaunitel metsaradadel koos kogenud matkajuhiga.",
         autor: "Autor: internet",
-        
+
     },
     {
-        pealkiri: "Loodusmatkad",
-        pilt: "./pilt3.jpg",
-        kuupaev: "08.02.2023",
+        nimi: "Loodusmatkad",
+        pildiAadress: './assets/pilt3.jpg',
         sisu: "Loodusmatk väikestele ja suurtele",
         autor: "Autor: internet",
-        
+        kuupaev: "08.02.2023",
+
     },
 ]
 
 
-function teeUudisHtml(uudisObj) {
-    let uudisHtml = '';
-    uudisHtml += '<div class="postitus pt-4">';
-    uudisHtml +=    '<div class="justify-content-left padding: 15px">';
-    uudisHtml +=        '<h3>'+uudisObj.pealkiri+'</h3>';
-    uudisHtml +=        '<div class="postitus-kuupaev">'+ uudisObj.kuupaev+'</div>';
-    uudisHtml += '<div class="postitus-pilt">'+ uudisObj.pilt+'</div>';
-    uudisHtml +=    '</div>';
-    uudisHtml +=    '<div class="postitus-sisu">';
-    uudisHtml +=        uudisObj.sisu;
-    uudisHtml +=        '<h6>'+uudisObj.autor+'</h6>';
-    uudisHtml +=    '</div>';
-    uudisHtml += '</div>';
-
-    return uudisHtml;
+function looUudisedHTML(uudis) {
+    return `
+    <div class="col-4 card">
+        <img class="card-img-top" src="${uudis.pilt}"
+        <div class="card-body">
+        <div class="card-title"> ${uudis.pealkiri} <span class="komm">
+          ${uudis.kommentaarid}</span>
+        </div>
+        <div class="card-text"> 
+        <div class="pikk"> 
+             ${uudis.tekst}
+        </div>
+    <div>
+    <button class="uudisnupp" >Vaata edasi</button>
+    </div>
+    </div>
+    </div>
+    `
 }
-
-function teePiltHTML(index) {
-    let pilt = pildid[index]
-    //return '<img src="' + kassid + '">'
-    return `<img src="${pildid}">`
-}
-
 
 function naitaUudiseid() {
-    const uudisedElement = document.getElementById('uudistekonteiner');
-    let koikUudisedHtml = '';
-    for (uudis of koikUudised) {
-        koikUudisedHtml += teeUudisHtml(uudis);
+
+    let valjundElement = document.getElementById("valjund")
+    let valjundHTML = ''
+    valjundHTML += '<div class="row">'
+    for (let i = 0; i < uudised.length; i++) {
+        valjundHTML += looUudisHTML(Uudised[i])
     }
-    uudisedElement.innerHTML = koikUudisedHtml;
+    valjundHTML += '</div>'
+    valjundElement.innerHTML = valjundHTML
+    }
+    
+    naitaUudiseid()
+
+let UudisedHtml = ''
+
+for (let uudis of uudised) {
+    UudisedHtml += koostaUudisedHtml(uudis)
 }
 
-naitaUudiseid()
+document.querySelector('.uudis').innerHTML = UudisedHtml
