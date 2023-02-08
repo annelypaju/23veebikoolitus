@@ -62,12 +62,11 @@ nav ul li a:hover{
     margin-left: 120px;
 }
 
-#box {
+#kast {
     border-radius: 5px;
-    padding: 20px;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 5px;
+    width: 600px;
+   
     font-family: 'montserrat';
 }
 

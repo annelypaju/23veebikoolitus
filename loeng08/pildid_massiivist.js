@@ -6,8 +6,14 @@ const kassid = [
 ]
 
 function teeKassidHTML(index) {
-    let pilt = kassid[index]
-    return '<div class="rida">' + pilt + '</div>'
+    let kassid = kassid[index]
+    //return '<img src="' + kassid + '">'
+    //return `<img src="${kassid}">`
+    return `
+    <div class="pildiYmbris">
+    <img src="${pildiAadress}">
+               </div> 
+               `        
 }
 
 
@@ -16,4 +22,4 @@ for (let i = 0; i < pildid.length; i++) {
     kassidLoeteluHTML += teeKassidHTML(i)
 }
 
-document.getElementById("Kassid").innerHTML = kassidLoeteluHTML
+document.getElementById("kassid").innerHTML = kassidLoeteluHTML
